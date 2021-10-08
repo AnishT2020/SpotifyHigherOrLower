@@ -5,9 +5,9 @@ from spotipy.oauth2 import SpotifyClientCredentials
 spotify = spotipy.Spotify(client_credentials_manager=SpotifyClientCredentials(client_id = '5801f1d7c9494b279259be2fe3d9aa72',
                                                                               client_secret = 'ee018dc65b4c43fbbd6827534a64747a'))
 
-birdy_uri = 'spotify:artist:2WX2uTcsvV5OnS0inACecP'
+artist_uri = 'spotify:artist:5K4W6rqBFWDnAN6FQUkS6x'
 
-results = spotify.artist_albums(birdy_uri, album_type='album')
+results = spotify.artist_albums(artist_uri, album_type='album')
 albums = results['items']
 while results['next']:
     results = spotify.next(results)
